@@ -1,1 +1,9 @@
+/Users/romaincaron/cours/ingelogiciel/my-sudoku/src/main/java/org/sudoku/models/ElementDeGrille.java
+/Users/romaincaron/cours/ingelogiciel/my-sudoku/src/main/java/org/sudoku/exceptions/ValeurInitialeModificationException.java
+/Users/romaincaron/cours/ingelogiciel/my-sudoku/src/main/java/org/sudoku/exceptions/ElementInterditException.java
+/Users/romaincaron/cours/ingelogiciel/my-sudoku/src/main/java/org/sudoku/models/GrilleImpl.java
 /Users/romaincaron/cours/ingelogiciel/my-sudoku/src/main/java/org/sudoku/main/App.java
+/Users/romaincaron/cours/ingelogiciel/my-sudoku/src/main/java/org/sudoku/models/ElementDeGrilleImplAsChar.java
+/Users/romaincaron/cours/ingelogiciel/my-sudoku/src/main/java/org/sudoku/models/Grille.java
+/Users/romaincaron/cours/ingelogiciel/my-sudoku/src/main/java/org/sudoku/exceptions/HorsBornesException.java
+/Users/romaincaron/cours/ingelogiciel/my-sudoku/src/main/java/org/sudoku/exceptions/ValeurImpossibleException.java
