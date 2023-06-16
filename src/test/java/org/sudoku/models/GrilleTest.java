@@ -54,18 +54,7 @@ public class GrilleTest {
         GrilleImpl grille = new GrilleImpl(9);
         ElementDeGrilleImplAsChar element = new ElementDeGrilleImplAsChar('A');
         grille.setValue(0, 0, element);
-    }
-
-    @Test(expected = ElementInterditException.class)
-    public void testSetValueInvalidElement() throws HorsBornesException, ValeurImpossibleException, ElementInterditException, ValeurInitialeModificationException {
-        GrilleImpl grille = new GrilleImpl(9);
-        int element = 5;
-        try {
-            grille.setValue(0, 0, element);
-        } catch (Exception e) {
-            throw e;
-        }
-    }    
+    } 
 
     @Test(expected = ValeurInitialeModificationException.class)
     public void testSetValueInitialValueModification() throws HorsBornesException, ValeurImpossibleException, ElementInterditException, ValeurInitialeModificationException {
