@@ -13,7 +13,7 @@ public class GrilleImpl implements Grille {
     private Set<ElementDeGrille> elementsDeGrille;
     private int taille;
 
-    public GrilleImpl(ElementDeGrille[] elementDeGrilles, ElementDeGrille[][] grilleTab) {
+    public GrilleImpl(final ElementDeGrille[] elementDeGrilles, final ElementDeGrille[][] grilleTab) {
         this.elementsDeGrille = new HashSet<>();
         this.grille = grilleTab;
         this.taille = this.grille.length;
@@ -54,7 +54,7 @@ public class GrilleImpl implements Grille {
      * @throws ElementInterditException              si la valeur est interdite
      * @throws ValeurInitialeModificationException   si la valeur est une valeur initiale
      */
-    public void setValue(int x, int y, ElementDeGrille value) throws HorsBornesException, ValeurImpossibleException, ElementInterditException, ValeurInitialeModificationException {
+    public void setValue(final int x, final int y, final ElementDeGrille value) throws HorsBornesException, ValeurImpossibleException, ElementInterditException, ValeurInitialeModificationException {
         if (x < 0 || x >= taille || y < 0 || y >= taille) {
             throw new HorsBornesException("Position hors bornes");
         }
@@ -82,7 +82,7 @@ public class GrilleImpl implements Grille {
      * 
      * @return valeur de l'élément de grille
      */
-    public ElementDeGrille getValue(int x, int y) throws HorsBornesException {
+    public ElementDeGrille getValue(final int x, final int y) throws HorsBornesException {
         if (x < 0 || x >= taille || y < 0 || y >= taille) {
             throw new HorsBornesException("Position hors bornes");
         }
@@ -117,7 +117,7 @@ public class GrilleImpl implements Grille {
      * 
      * @return true si la valeur est possible à cette position, false sinon
      */
-    public boolean isPossible(int x, int y, ElementDeGrille value) throws HorsBornesException, ElementInterditException {
+    public boolean isPossible(final int x, final int y, final ElementDeGrille value) throws HorsBornesException, ElementInterditException {
         // Vérifier si la position est hors bornes
         if (x < 0 || x >= taille || y < 0 || y >= taille) {
             throw new HorsBornesException("Position hors bornes");
@@ -160,7 +160,7 @@ public class GrilleImpl implements Grille {
      * 
      * @return true si la valeur est une valeur initiale, false sinon
      */
-    public boolean isValeurInitiale(int x, int y) {
+    public boolean isValeurInitiale(final int x, final int y) {
         return grille[x][y] != null && grille[x][y].isInitialValue();
     }
 
