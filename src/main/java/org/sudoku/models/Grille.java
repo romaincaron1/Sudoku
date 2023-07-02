@@ -29,7 +29,6 @@ public interface Grille {
 
     /**
      * Affecte une valeur dans une case de la grille, ou null pour 'vider' la case
-     *
      * @param x     position x dans la grille
      * @param y     position y dans la grille
      * @param value élément de grille à mettre dans la case, null pour vider la case
@@ -44,7 +43,6 @@ public interface Grille {
 
     /**
      * Renvoie une valeur de la grille.
-     *
      * @param x position x dans la grille
      * @param y position y dans la grille
      * @return élément de la grille de la case x,y, null s'il n'y a pas d'élément à cette position
@@ -54,14 +52,12 @@ public interface Grille {
 
     /**
      * Teste si une grille est remplie.
-     *
      * @return true si la grille est complete
      */
     boolean isComplete();
 
     /**
      * Teste si une valeur peut être placée dans la grille.
-     *
      * @param x     position x dans la grille
      * @param y     position y dans la grille
      * @param value valeur a mettre dans la case

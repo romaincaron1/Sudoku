@@ -8,10 +8,9 @@ public class SolveurImpl implements Solveur {
   @Override
   /**
    * Résout une grille de sudoku
-   * 
    * @param grille grille à résoudre
-   * 
    * @return true si la grille a été résolue, false sinon
+   * @throws Exception
    */
   public boolean solve(final Grille grille) throws Exception {
     return solveSudoku(grille, 0, 0);
@@ -19,12 +18,10 @@ public class SolveurImpl implements Solveur {
 
   /**
    * Résout une grille de sudoku
-   * 
    * @param grille grille à résoudre
    * @param row ligne courante
    * @param col colonne courante
    * @throws Exception
-   * 
    * @return true si la grille a été résolue, false sinon
    */
   private boolean solveSudoku(
@@ -68,13 +65,11 @@ public class SolveurImpl implements Solveur {
 
   /**
    * Teste si une valeur est présente dans une ligne
-   * 
    * @param grille grille à tester
    * @param row ligne à tester
    * @param value valeur à tester
    * @return
    * @throws HorsBornesException
-   * 
    * @return true si la valeur est présente dans la ligne, false sinon
    */
   private boolean isValueInRow(
@@ -100,13 +95,11 @@ public class SolveurImpl implements Solveur {
 
   /**
    * Teste si une valeur est présente dans une colonne
-   * 
    * @param grille grille à tester
    * @param col colonne à tester
    * @param value valeur à tester
    * @return
    * @throws HorsBornesException
-   * 
    * @return true si la valeur est présente dans la colonne, false sinon
    */
   private boolean isValueInColumn(

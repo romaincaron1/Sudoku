@@ -24,30 +24,25 @@ public class GrilleImpl implements Grille {
     }
   }
 
-  @Override
   /**
    * Renvoie l'ensemble des éléments de grille
-   *
    * @return ensemble des éléments de grille
    */
-  public Set<ElementDeGrille> getElements() {
+  public final Set<ElementDeGrille> getElements() {
     return elementsDeGrille;
   }
 
   @Override
   /**
    * Renvoie la taille de la grille
-   *
    * @return taille de la grille
    */
   public int getDimension() {
     return taille;
   }
 
-  @Override
   /**
    * Modifie la valeur d'un élément de grille
-   *
    * @param x     position x de l'élément de grille
    * @param y     position y de l'élément de grille
    * @param value valeur de l'élément de grille
@@ -56,7 +51,7 @@ public class GrilleImpl implements Grille {
    * @throws ElementInterditException              si la valeur est interdite
    * @throws ValeurInitialeModificationException   si la valeur est une valeur initiale
    */
-  public void setValue(final int x, final int y, final ElementDeGrille value)
+  public final void setValue(final int x, final int y, final ElementDeGrille value)
     throws HorsBornesException, ValeurImpossibleException, ElementInterditException, ValeurInitialeModificationException {
     if (x < 0 || x >= taille || y < 0 || y >= taille) {
       throw new HorsBornesException("Position hors bornes");
@@ -80,16 +75,13 @@ public class GrilleImpl implements Grille {
     }
   }
 
-  @Override
   /**
    * Renvoie la valeur d'un élément de grille
-   *
    * @param x position x de l'élément de grille
    * @param y position y de l'élément de grille
-   *
    * @return valeur de l'élément de grille
    */
-  public ElementDeGrille getValue(final int x, final int y)
+  public final ElementDeGrille getValue(final int x, final int y)
     throws HorsBornesException {
     if (x < 0 || x >= taille || y < 0 || y >= taille) {
       throw new HorsBornesException("Position hors bornes");
@@ -98,13 +90,11 @@ public class GrilleImpl implements Grille {
     return grille[x][y];
   }
 
-  @Override
   /**
    * Renvoie si la grille est complète ou non
-   *
    * @return true si la grille est complète, false sinon
    */
-  public boolean isComplete() {
+  public final boolean isComplete() {
     for (int x = 0; x < taille; x++) {
       for (int y = 0; y < taille; y++) {
         if (grille[x][y] == null) {
@@ -115,17 +105,14 @@ public class GrilleImpl implements Grille {
     return true;
   }
 
-  @Override
   /**
    * Renvoie si la valeur est possible à cette position ou non
-   *
    * @param x     position x de l'élément de grille
    * @param y     position y de l'élément de grille
    * @param value valeur de l'élément de grille
-   *
    * @return true si la valeur est possible à cette position, false sinon
    */
-  public boolean isPossible(
+  public final boolean isPossible(
     final int x,
     final int y,
     final ElementDeGrille value
@@ -144,10 +131,10 @@ public class GrilleImpl implements Grille {
     // Vérification de la ligne et de la colonne
     for (int i = 0; i < taille; i++) {
       if (
-        grille[x][i] != null &&
-        grille[x][i].equals(value) ||
-        grille[i][y] != null &&
-        grille[i][y].equals(value)
+        grille[x][i] != null 
+        && grille[x][i].equals(value) 
+        || grille[i][y] != null 
+        && grille[i][y].equals(value)
       ) {
         return false;
       }
@@ -175,26 +162,21 @@ public class GrilleImpl implements Grille {
     return true;
   }
 
-  @Override
   /**
    * Renvoie si la valeur est une valeur initiale ou non
-   *
    * @param x position x de l'élément de grille
    * @param y position y de l'élément de grille
-   *
    * @return true si la valeur est une valeur initiale, false sinon
    */
-  public boolean isValeurInitiale(final int x, final int y) {
+  public final boolean isValeurInitiale(final int x, final int y) {
     return grille[x][y] != null && grille[x][y].isInitialValue();
   }
 
   /**
    * Renvoie la grille sous forme de chaîne de caractères
-   *
    * @return la grille sous forme de chaîne de caractères avec un retour à la ligne à la fin de chaque ligne
    */
-  @Override
-  public String toString() {
+  public final String toString() {
     StringBuilder stringBuilder = new StringBuilder();
     for (int ligne = 0; ligne < taille; ligne++) {
       for (int col = 0; col < taille; col++) {
