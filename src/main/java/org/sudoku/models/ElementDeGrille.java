@@ -1,17 +1,12 @@
 package org.sudoku.models;
 
-import org.sudoku.exceptions.ValeurInitialeModificationException;
-
+/**
+ * @author Sébastien Choplin <sebastien.choplin@u-picardie.fr>
+ */
 public interface ElementDeGrille {
-    // Get value
-    char getValue();
-
-    // Set value
-    void setValue(char value) throws ValeurInitialeModificationException;
-
-    // is initial value
     boolean isInitialValue();
 
-    // set initial value
-    void setInitialValue(boolean initialValue);
+    void setInitialValue(boolean isInitialValue);
+
+    char getValue();
 }

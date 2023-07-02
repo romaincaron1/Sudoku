@@ -2,20 +2,32 @@ package org.sudoku.models;
 
 import org.junit.Assert;
 import org.junit.Test;
-import org.sudoku.exceptions.ValeurInitialeModificationException;
 
 public class ElementDeGrilleImplAsCharTest {
 
     @Test
     public void testGetValue() {
         ElementDeGrilleImplAsChar element = new ElementDeGrilleImplAsChar('5');
-        char value = element.getValue();
-        Assert.assertEquals('5', value);
+        Assert.assertEquals('5', element.getValue());
     }
 
-    @Test(expected = ValeurInitialeModificationException.class)
-    public void testSetValue() throws ValeurInitialeModificationException {
+    @Test
+    public void testEquals() {
+        ElementDeGrilleImplAsChar element1 = new ElementDeGrilleImplAsChar('5');
+        ElementDeGrilleImplAsChar element2 = new ElementDeGrilleImplAsChar('5');
+        ElementDeGrilleImplAsChar element3 = new ElementDeGrilleImplAsChar('6');
+
+        Assert.assertEquals(element1, element2);
+        Assert.assertNotEquals(element1, element3);
+    }
+
+    @Test
+    public void testIsInitialValue() {
         ElementDeGrilleImplAsChar element = new ElementDeGrilleImplAsChar('5');
-        element.setValue('6');
+        Assert.assertTrue(element.isInitialValue());
+        
+        element.setInitialValue(false);
+        Assert.assertFalse(element.isInitialValue());
     }
 }
+

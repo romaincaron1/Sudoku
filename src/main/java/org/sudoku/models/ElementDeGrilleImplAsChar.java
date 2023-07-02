@@ -1,32 +1,65 @@
 package org.sudoku.models;
 
-import org.sudoku.exceptions.ValeurInitialeModificationException;
-
 public class ElementDeGrilleImplAsChar implements ElementDeGrille {
     private char value;
-    private boolean initialValue;
 
+    private boolean isInitialValue;
+    
+    /**
+     * Constructeur d'un élément de grille.
+     *
+     * @param value la valeur de l'élément de grille
+     */
     public ElementDeGrilleImplAsChar(char value) {
         this.value = value;
+        this.isInitialValue = true;
     }
-
-    @Override
+    
+    /**
+     * Renvoie la valeur de l'élément de grille.
+     *
+     * @return valeur de l'élément de grille
+     */
     public char getValue() {
         return value;
     }
-
+    
+    /**
+     * Compare l'élément de grille avec un autre objet.
+     * 
+     * @param obj objet à comparer avec l'élément de grille
+     * @return true si l'objet est égal à l'élément de grille, false sinon
+     */
     @Override
-    public void setValue(char value) throws ValeurInitialeModificationException {
-        throw new ValeurInitialeModificationException("Cannot modify initial value");
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        
+        if (obj == null || getClass() != obj.getClass()) {
+            return false;
+        }
+        
+        ElementDeGrilleImplAsChar autre = (ElementDeGrilleImplAsChar) obj;
+        return value == autre.value;
     }
 
-    @Override
+    /**
+     * Renvoie si l'élément de grille est une valeur initiale ou non.
+     *
+     * @return true si l'élément de grille est une valeur initiale, false sinon
+     */
     public boolean isInitialValue() {
-        return initialValue;
+        return isInitialValue;
     }
 
-    @Override
-    public void setInitialValue(boolean initialValue) {
-        this.initialValue = initialValue;
+    /**
+     * Si l'élément de grille est une valeur initiale ou non.
+     *
+     * @param isInitialValue true si l'élément de grille est une valeur initiale, false sinon
+     */
+    public void setInitialValue(boolean isInitialValue) {
+        this.isInitialValue = isInitialValue;
     }
 }
+

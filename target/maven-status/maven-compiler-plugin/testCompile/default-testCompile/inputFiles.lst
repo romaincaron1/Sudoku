@@ -1,7 +1,7 @@
 /Users/romaincaron/cours/ingelogiciel/my-sudoku/src/test/java/org/sudoku/exceptions/ValeurInitialeModificationExceptionTest.java
-/Users/romaincaron/cours/ingelogiciel/my-sudoku/src/test/java/org/sudoku/models/GrilleTest.java
 /Users/romaincaron/cours/ingelogiciel/my-sudoku/src/test/java/org/sudoku/models/ElementDeGrilleImplAsCharTest.java
 /Users/romaincaron/cours/ingelogiciel/my-sudoku/src/test/java/org/sudoku/exceptions/ElementInterditExceptionTest.java
+/Users/romaincaron/cours/ingelogiciel/my-sudoku/src/test/java/org/sudoku/models/GrilleImplTest.java
 /Users/romaincaron/cours/ingelogiciel/my-sudoku/src/test/java/org/sudoku/exceptions/HorsBornesExceptionTest.java
 /Users/romaincaron/cours/ingelogiciel/my-sudoku/src/test/java/org/sudoku/main/AppTest.java
 /Users/romaincaron/cours/ingelogiciel/my-sudoku/src/test/java/org/sudoku/exceptions/ValeurImpossibleExceptionTest.java
