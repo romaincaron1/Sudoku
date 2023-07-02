@@ -20,10 +20,9 @@ public class SolveurImpl implements Solveur {
   /**
    * Résout une grille de sudoku
    * 
-   * @param grille
-   * @param row
-   * @param col
-   * @return
+   * @param grille grille à résoudre
+   * @param row ligne courante
+   * @param col colonne courante
    * @throws Exception
    * 
    * @return true si la grille a été résolue, false sinon
@@ -70,9 +69,9 @@ public class SolveurImpl implements Solveur {
   /**
    * Teste si une valeur est présente dans une ligne
    * 
-   * @param grille
-   * @param row
-   * @param value
+   * @param grille grille à tester
+   * @param row ligne à tester
+   * @param value valeur à tester
    * @return
    * @throws HorsBornesException
    * 
@@ -102,9 +101,9 @@ public class SolveurImpl implements Solveur {
   /**
    * Teste si une valeur est présente dans une colonne
    * 
-   * @param grille
-   * @param col
-   * @param value
+   * @param grille grille à tester
+   * @param col colonne à tester
+   * @param value valeur à tester
    * @return
    * @throws HorsBornesException
    * 

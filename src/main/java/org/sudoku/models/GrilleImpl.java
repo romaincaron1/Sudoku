@@ -57,10 +57,7 @@ public class GrilleImpl implements Grille {
    * @throws ValeurInitialeModificationException   si la valeur est une valeur initiale
    */
   public void setValue(final int x, final int y, final ElementDeGrille value)
-    throws HorsBornesException, 
-    ValeurImpossibleException, 
-    ElementInterditException, 
-    ValeurInitialeModificationException {
+    throws HorsBornesException, ValeurImpossibleException, ElementInterditException, ValeurInitialeModificationException {
     if (x < 0 || x >= taille || y < 0 || y >= taille) {
       throw new HorsBornesException("Position hors bornes");
     }
@@ -147,8 +144,10 @@ public class GrilleImpl implements Grille {
     // Vérification de la ligne et de la colonne
     for (int i = 0; i < taille; i++) {
       if (
-        (grille[x][i] != null && grille[x][i].equals(value)) ||
-        (grille[i][y] != null && grille[i][y].equals(value))
+        grille[x][i] != null &&
+        grille[x][i].equals(value) ||
+        grille[i][y] != null &&
+        grille[i][y].equals(value)
       ) {
         return false;
       }

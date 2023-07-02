@@ -30,7 +30,7 @@ public class ElementDeGrilleImplAsChar implements ElementDeGrille {
    * @return true si l'objet est égal à l'élément de grille, false sinon
    */
   @Override
-  public final boolean equals(Object obj) {
+  public boolean equals(Object obj) {
     if (this == obj) {
       return true;
     }
@@ -41,6 +41,16 @@ public class ElementDeGrilleImplAsChar implements ElementDeGrille {
 
     ElementDeGrilleImplAsChar autre = (ElementDeGrilleImplAsChar) obj;
     return value == autre.value;
+  }
+
+  /**
+   * Renvoie le hashcode de l'élément de grille.
+   *
+   * @return hashcode de l'élément de grille
+   */
+  @Override
+  public int hashCode() {
+    return Character.hashCode(value);
   }
 
   /**
