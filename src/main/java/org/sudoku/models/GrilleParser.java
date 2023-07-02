@@ -12,7 +12,7 @@ import org.sudoku.exceptions.HorsBornesException;
 import org.sudoku.exceptions.ValeurImpossibleException;
 import org.sudoku.exceptions.ValeurInitialeModificationException;
 
-/**
+/**.
  * Méthodes utilitaire permettant de créer une Grille à partir d'un fichier texte.
  * Il est attendu que la première ligne contiennet : le symbole de case vide, suivi des symboles possibles dans la grille (en UTF-8).
  * Les autres lignes contiennent le contenu de la grille.
@@ -28,14 +28,14 @@ import org.sudoku.exceptions.ValeurInitialeModificationException;
  */
 public class GrilleParser{
 
-    /**
+    /**.
      * constructeur.
      */
     public GrilleParser() {
     }
    
 
-    /**
+    /**.
      * Fonction parse.
      *
      * @param in recu

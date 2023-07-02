@@ -7,7 +7,7 @@ import org.sudoku.exceptions.ValeurInitialeModificationException;
 
 import java.util.Set;
 
-/**
+/**.
  * Interface de grille de sudoku. Chaque case d'une Grille peut contenir un ElementDeGrille ou null si aucun élément n'est placé.
  * Une Grille doit toujours respecter les règles du sudoku.
  * <p>
@@ -17,17 +17,17 @@ import java.util.Set;
  */
 public interface Grille {
 
-    /**
+    /**.
      * Renvoie les ElementDeGrille pouvant exister dans le grille.
      */
     Set<ElementDeGrille> getElements();
 
-    /**
+    /**.
      * @return largeur/hauteur de la grille
      */
     int getDimension();
 
-    /**
+    /**.
      * Affecte une valeur dans une case de la grille, ou null pour 'vider' la case
      * @param x     position x dans la grille
      * @param y     position y dans la grille
@@ -41,7 +41,7 @@ public interface Grille {
     void setValue(int x, int y, ElementDeGrille value)
             throws HorsBornesException, ValeurImpossibleException, ElementInterditException, ValeurInitialeModificationException;
 
-    /**
+    /**.
      * Renvoie une valeur de la grille.
      * @param x position x dans la grille
      * @param y position y dans la grille
@@ -50,13 +50,13 @@ public interface Grille {
      */
     ElementDeGrille getValue(int x, int y) throws HorsBornesException;
 
-    /**
+    /**.
      * Teste si une grille est remplie.
      * @return true si la grille est complete
      */
     boolean isComplete();
 
-    /**
+    /**.
      * Teste si une valeur peut être placée dans la grille.
      * @param x     position x dans la grille
      * @param y     position y dans la grille
@@ -68,7 +68,7 @@ public interface Grille {
     boolean isPossible(int x, int y, ElementDeGrille value)
             throws HorsBornesException, ElementInterditException;
 
-    /**
+    /**.
      * @param x     position x dans la grille
      * @param y     position y dans la grille
      * @throws HorsBornesException      si x ou y sont hors bornes

@@ -4,7 +4,7 @@ public class ElementDeGrilleImplAsChar implements ElementDeGrille {
   private char value;
   private boolean isInitialValue;
 
-  /**
+  /**.
    * Constructeur d'un élément de grille.
    * @param value la valeur de l'élément de grille
    */
@@ -13,7 +13,7 @@ public class ElementDeGrilleImplAsChar implements ElementDeGrille {
     this.isInitialValue = true;
   }
 
-  /**
+  /**.
    * Renvoie la valeur de l'élément de grille.
    * @return valeur de l'élément de grille
    */
@@ -21,7 +21,7 @@ public class ElementDeGrilleImplAsChar implements ElementDeGrille {
     return value;
   }
 
-  /**
+  /**.
    * Compare l'élément de grille avec un autre objet.
    * @param obj objet à comparer avec l'élément de grille
    * @return true si l'objet est égal à l'élément de grille, false sinon
@@ -40,7 +40,7 @@ public class ElementDeGrilleImplAsChar implements ElementDeGrille {
     return value == autre.value;
   }
 
-  /**
+  /**.
    * Renvoie le hashcode de l'élément de grille.
    * @return hashcode de l'élément de grille
    */
@@ -49,7 +49,7 @@ public class ElementDeGrilleImplAsChar implements ElementDeGrille {
     return Character.hashCode(value);
   }
 
-  /**
+  /**.
    * Renvoie si l'élément de grille est une valeur initiale ou non.
    * @return true si l'élément de grille est une valeur initiale, false sinon
    */
@@ -57,7 +57,7 @@ public class ElementDeGrilleImplAsChar implements ElementDeGrille {
     return isInitialValue;
   }
 
-  /**
+  /**.
    * Si l'élément de grille est une valeur initiale ou non.
    * @param initialValue true si l'élément de grille est une valeur initiale, false sinon
    */

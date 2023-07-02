@@ -6,7 +6,7 @@ import org.sudoku.exceptions.HorsBornesException;
 public class SolveurImpl implements Solveur {
 
   @Override
-  /**
+  /**.
    * Résout une grille de sudoku
    * @param grille grille à résoudre
    * @return true si la grille a été résolue, false sinon
@@ -16,7 +16,7 @@ public class SolveurImpl implements Solveur {
     return solveSudoku(grille, 0, 0);
   }
 
-  /**
+  /**.
    * Résout une grille de sudoku
    * @param grille grille à résoudre
    * @param row ligne courante
@@ -63,7 +63,7 @@ public class SolveurImpl implements Solveur {
     return false;
   }
 
-  /**
+  /**.
    * Teste si une valeur est présente dans une ligne
    * @param grille grille à tester
    * @param row ligne à tester
@@ -93,7 +93,7 @@ public class SolveurImpl implements Solveur {
     return false;
   }
 
-  /**
+  /**.
    * Teste si une valeur est présente dans une colonne
    * @param grille grille à tester
    * @param col colonne à tester

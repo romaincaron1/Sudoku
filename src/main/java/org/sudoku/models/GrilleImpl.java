@@ -24,7 +24,7 @@ public class GrilleImpl implements Grille {
     }
   }
 
-  /**
+  /**.
    * Renvoie l'ensemble des éléments de grille
    * @return ensemble des éléments de grille
    */
@@ -33,7 +33,7 @@ public class GrilleImpl implements Grille {
   }
 
   @Override
-  /**
+  /**.
    * Renvoie la taille de la grille
    * @return taille de la grille
    */
@@ -41,7 +41,7 @@ public class GrilleImpl implements Grille {
     return taille;
   }
 
-  /**
+  /**.
    * Modifie la valeur d'un élément de grille
    * @param x     position x de l'élément de grille
    * @param y     position y de l'élément de grille
@@ -75,11 +75,12 @@ public class GrilleImpl implements Grille {
     }
   }
 
-  /**
+  /**.
    * Renvoie la valeur d'un élément de grille
    * @param x position x de l'élément de grille
    * @param y position y de l'élément de grille
    * @return valeur de l'élément de grille
+   * @throws HorsBornesException si la position est hors bornes
    */
   public final ElementDeGrille getValue(final int x, final int y)
     throws HorsBornesException {
@@ -90,7 +91,7 @@ public class GrilleImpl implements Grille {
     return grille[x][y];
   }
 
-  /**
+  /**.
    * Renvoie si la grille est complète ou non
    * @return true si la grille est complète, false sinon
    */
@@ -105,11 +106,13 @@ public class GrilleImpl implements Grille {
     return true;
   }
 
-  /**
+  /**.
    * Renvoie si la valeur est possible à cette position ou non
    * @param x     position x de l'élément de grille
    * @param y     position y de l'élément de grille
    * @param value valeur de l'élément de grille
+   * @throws HorsBornesException      si la position est hors bornes
+   * @throws ElementInterditException si la valeur est interdite
    * @return true si la valeur est possible à cette position, false sinon
    */
   public final boolean isPossible(
@@ -162,7 +165,7 @@ public class GrilleImpl implements Grille {
     return true;
   }
 
-  /**
+  /**.
    * Renvoie si la valeur est une valeur initiale ou non
    * @param x position x de l'élément de grille
    * @param y position y de l'élément de grille
@@ -172,7 +175,7 @@ public class GrilleImpl implements Grille {
     return grille[x][y] != null && grille[x][y].isInitialValue();
   }
 
-  /**
+  /**.
    * Renvoie la grille sous forme de chaîne de caractères
    * @return la grille sous forme de chaîne de caractères avec un retour à la ligne à la fin de chaque ligne
    */
