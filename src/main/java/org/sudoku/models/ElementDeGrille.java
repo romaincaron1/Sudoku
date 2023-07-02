@@ -4,9 +4,9 @@ package org.sudoku.models;
  * @author Sébastien Choplin <sebastien.choplin@u-picardie.fr>
  */
 public interface ElementDeGrille {
-    boolean isInitialValue();
+  boolean isInitialValue();
 
-    void setInitialValue(boolean isInitialValue);
+  void setInitialValue(boolean isInitialValue);
 
-    char getValue();
+  char getValue();
 }
